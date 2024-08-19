@@ -11,7 +11,7 @@ kmtests is a statistical program by KryptoMagick to test random binary datasets.
 kmtests filename > output.file
 
 
-# Uniformly Random A-Z Data
+# Uniformly Random Binary Data
 
 Uniformly random binary data should appear similar to the following output.  The ChaCha20 stream cipher was used as a model ideal cipher.  Below is data from 1MB of 0's being encrypted by a single key.
 
