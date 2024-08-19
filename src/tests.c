@@ -94,8 +94,6 @@ void printBiGraph(struct tests *t) {
 void resultsBiGraph(struct tests *t) {
     int expected_max = ((t->datalen + (65536 * 16)) / 65536 / 4) * 2;
     int expected_min = ((t->datalen + (65536 * 16)) / 4 / ((65536 / 16) + 65536)) / 2;
-    printf("bi min %d\n", expected_min);
-    printf("bi max %d\n", expected_max);
     for (int i = 0; i < 65536; i++) {
         if ((bigraphOccurrences[i] >= expected_min) && (bigraphOccurrences[i] <= expected_max)) {
             bigraphResults[i] = 0;
@@ -196,8 +194,6 @@ void printTriGraphs(struct tests *t) {
 void resultsTriGraph(struct tests *t) {
     int expected_max = (t->datalen + (16777216 * 256 * 2)) / 16777216 / 3;
     int expected_min = (t->datalen + (16777216 * 1 * 1)) / 3 / ((16777216 / 2) + 16777216);
-    printf("tri min %d\n", expected_min);
-    printf("tri max %d\n", expected_max);
     for (int i = 0; i < 65536; i++) {
         if ((trigraphOccurrences[i] >= expected_min) && (trigraphOccurrences[i] <= expected_max)) {
             trigraphResults[i] = 0;
